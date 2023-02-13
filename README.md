@@ -6,7 +6,7 @@ The algorithm works by contracting edges in the graph randomly and finding the m
 The algorithm takes an adjacency matrix representation of the graph as input. Each element graph[i][j] represents the weight of the edge between vertices i and j. If there is no edge between i and j, the element should be set to 0.
 ```
 graph = [[0, 1, 1, 1], [1, 0, 1, 1], [1, 1, 0, 1], [1, 1, 1, 0]]
-min_cut, min_cut_sets, min_cut_edges = find_cut(graph)
+min_cut, min_cut_sets = krager_min_cut(graph)
 ```
 
-The output min_cut is the size of the minimum cut, and min_cut_sets is a tuple of two lists representing the two disjoint sets resulting from the cut. The min_cut_edges is a list of tuples representing the edges that were contracted in the graph.
+The output min_cut is the size of the minimum cut, and min_cut_sets is a tuple of two lists representing the two disjoint sets resulting from the cut.
